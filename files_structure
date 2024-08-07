@@ -1,0 +1,126 @@
+
+lib/
+├── main.dart
+├── service_locator.dart
+├── src/
+│   ├── common/
+│   │   ├── bloc/
+│   │   │   ├── user_bloc.dart
+│   │   ├── helper/
+│   │   │   ├── is_dark_mode.dart
+│   │   ├── widgets/
+│   │   │   ├── app_bar/
+│   │   │   │   ├── app_bar.dart
+│   │   │   ├── button/
+│   │   │   │   ├── basic_app_button.dart
+│   │   │   ├── app_bar/
+│   ├── core/
+│   │   ├── configs/
+│   │   │   ├── assets/
+│   │   │   │   ├── app_assets.dart
+│   │   │   │   ├── app_vectors.dart
+│   │   │   ├── constants/
+│   │   │   ├── theme/
+│   │   │   │   ├── app_colors.dart
+│   │   │   │   ├── app_themes.dart
+│   │   ├── usecases/
+│   ├── data/
+│   │   ├── models/
+│   │   │   ├── auth/
+│   │   │   │   ├── create_user_request.dart
+│   │   ├── repository/
+│   │   │   ├── auth/
+│   │   │   │   ├── auth_repository_implementation.dart
+│   │   ├── sources/
+│   │   │   ├── auth/
+│   │   │   │   ├── auth_firebase_service.dart
+│   ├── domain/
+│   │   ├── entities/
+│   │   │   ├── auth/
+│   │   │   │   ├── user.dart
+│   │   ├── repository/
+│   │   │   ├── auth/
+│   │   │   │   ├── auth.dart
+│   │   ├── usecases/
+│   ├── presentation/
+│   │   ├── auth/
+│   │   │   ├── pages/
+│   │   │   │   ├── signup_or_signin.dart
+│   │   │   │   ├── signin.dart
+│   │   │   │   ├── signup.dart
+│   │   ├── choose_mode/
+│   │   │   ├── bloc/
+│   │   │   │   ├── theme_cubit.dart
+│   │   │   ├── pages/
+│   │   │   │   ├── choose_mode.dart
+│   │   ├── intro/
+│   │   │   ├── pages/
+│   │   │   │   ├── get_started.dart
+│   │   ├── splash/
+│   │   │   ├── bloc/
+│   │   │   ├── pages/
+│   │   │   │   ├── get_startes.dart
+│   │   │   ├── widgets/
+
+----------------------------------------------
+lib/
+├── main.dart
+├── service_locator.dart
+├── src/
+│   ├── common/
+│   │   ├── bloc/
+│   │   │   ├── user_bloc.dart
+│   │   ├── helper/
+│   │   │   ├── is_dark_mode.dart
+│   │   ├── widgets/
+│   │       ├── app_bar.dart
+│   │       ├── basic_app_button.dart
+│   ├── core/
+│   │   ├── configs/
+│   │   │   ├── assets/
+│   │   │   │   ├── app_assets.dart
+│   │   │   │   ├── app_vectors.dart
+│   │   │   ├── constants/
+│   │   │   ├── theme/
+│   │   │       ├── app_colors.dart
+│   │   │       ├── app_themes.dart
+│   ├── data/
+│   │   ├── models/
+│   │   │   ├── auth/
+│   │   │       ├── create_user_request.dart
+│   │   ├── repository/
+│   │   │   ├── auth_repository_implementation.dart
+│   │   ├── sources/
+│   │       ├── services/
+│   │           ├── firebase/
+│   │               ├── auth_firebase_service.dart
+│   ├── domain/
+│   │   ├── entities/
+│   │   │   ├── user.dart
+│   │   ├── repository/
+│   │   │   ├── auth.dart
+│   │   ├── usecases/
+│   │       ├── authenticate_user.dart
+│   │       ├── signout_user.dart
+│   ├── presentation/
+│   │   ├── auth/
+│   │   │   ├── bloc/
+│   │   │   │   ├── auth_bloc.dart
+│   │   │   ├── pages/
+│   │   │   │   ├── signup_or_signin.dart
+│   │   │   │   ├── signin.dart
+│   │   │   │   ├── signup.dart
+│   │   ├── choose_mode/
+│   │   │   ├── bloc/
+│   │   │   │   ├── theme_cubit.dart
+│   │   │   ├── pages/
+│   │   │       ├── choose_mode.dart
+│   │   ├── intro/
+│   │   │   ├── pages/
+│   │   │       ├── get_started.dart
+│   │   ├── splash/
+│   │   │   ├── bloc/
+│   │   │   ├── pages/
+│   │   │       ├── get_started.dart
+│   │   │   ├── widgets/
+
