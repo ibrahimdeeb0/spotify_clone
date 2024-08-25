@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spotify_clone_with_flutter_used_block/common/widgets/button/basic_app_button.dart';
 import 'package:spotify_clone_with_flutter_used_block/core/configs/assets/app_vectors.dart';
 import 'package:spotify_clone_with_flutter_used_block/data/models/auth/create_user_req.dart';
-import 'package:spotify_clone_with_flutter_used_block/domain/usecases/signup.dart';
+import 'package:spotify_clone_with_flutter_used_block/domain/usecases/auth/signup.dart';
 import 'package:spotify_clone_with_flutter_used_block/presentation/auth/pages/signin.dart';
 import 'package:spotify_clone_with_flutter_used_block/presentation/home/pages/home.dart';
 import 'package:spotify_clone_with_flutter_used_block/service_locator.dart';

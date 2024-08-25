@@ -3,7 +3,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:spotify_clone_with_flutter_used_block/common/widgets/app_bar/app_bar.dart';
 import 'package:spotify_clone_with_flutter_used_block/common/widgets/button/basic_app_button.dart';
 import 'package:spotify_clone_with_flutter_used_block/core/configs/assets/app_vectors.dart';
+import 'package:spotify_clone_with_flutter_used_block/data/models/auth/signin_user_req.dart';
+import 'package:spotify_clone_with_flutter_used_block/domain/usecases/auth/sigin.dart';
 import 'package:spotify_clone_with_flutter_used_block/presentation/auth/pages/signup.dart';
+import 'package:spotify_clone_with_flutter_used_block/presentation/home/pages/home.dart';
+import 'package:spotify_clone_with_flutter_used_block/service_locator.dart';
 
 class SigninPage extends StatelessWidget {
   SigninPage({super.key});
@@ -40,28 +44,37 @@ class SigninPage extends StatelessWidget {
               height: 20,
             ),
             BasicAppButton(
-                onPressed: () async {
-                  //  var result = await sl<SigninUseCase>().call(
-                  //   params: SigninUserReq(
-                  //     email: _email.text.toString(),
-                  //     password: _password.text.toString()
-                  //   )
-                  // );
-                  // result.fold(
-                  //   (l){
-                  //     var snackbar = SnackBar(content: Text(l),behavior: SnackBarBehavior.floating,);
-                  //     ScaffoldMessenger.of(context).showSnackBar(snackbar);
-                  //   },
-                  //   (r){
-                  //     Navigator.pushAndRemoveUntil(
-                  //       context,
-                  //       MaterialPageRoute(builder: (BuildContext context) => const HomePage()),
-                  //       (route) => false
-                  //     );
-                  //   }
-                  // );
-                },
-                title: 'Sign In')
+              onPressed: () async {
+                var result = await sl<SigninUseCase>().call(
+                  params: SigninUserReq(
+                    email: _email.text.toString(),
+                    password: _password.text.toString(),
+                  ),
+                );
+
+                print('==>__ result of SingIn is $result');
+
+                result.fold(
+                  (l) {
+                    var snackbar = SnackBar(
+                      content: Text(l),
+                      behavior: SnackBarBehavior.floating,
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(snackbar);
+                  },
+                  (r) {
+                    Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(
+                          builder: (BuildContext context) =>
+                              const HomeScreen()),
+                      (route) => false,
+                    );
+                  },
+                );
+              },
+              title: 'Sign In',
+            )
           ],
         ),
       ),
